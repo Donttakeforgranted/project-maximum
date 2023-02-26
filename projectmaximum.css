@@ -116,6 +116,7 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 #ab
 {
     display: inline;
+    cursor: pointer;
 }
 
 #auspan
