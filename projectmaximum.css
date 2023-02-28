@@ -1,4 +1,3 @@
-
 *
 {
     margin: 0px;
@@ -7,10 +6,10 @@
 
 body
 {
-background: url(pmimg/brickwall.jpg) no-repeat fixed;
-background-size: cover;
-height: 1500px;
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: url(pmimg/brickwall.jpg) no-repeat fixed;
+    background-size: cover;
+    height: 1500px;
+    font-family: 'Franklin Gothic Medium';
 }
 
 #head
@@ -28,13 +27,20 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     z-index: 1;
 }
 
-#logo
+#logospan
 {
     position: relative;
     font-size: 30px;
     top: 15px;
     left: 15px;
     cursor: pointer;
+    width: 20%;
+}
+
+#logospan:hover
+{
+    box-shadow: rgba(0, 0, 0, 1);
+    text-shadow: rgba(0, 0, 0, 0.5);
 }
 
 #hpanel
@@ -79,6 +85,13 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     z-index: 1;
 }
 
+select
+{
+    background: #333;
+    border: 1px solid #fafafa;
+    color: #fafafa;
+}
+
 #signupdiv
 {
     display:none;
@@ -113,7 +126,8 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 .vdiv
 {
     margin-bottom: 20px;
-    width: 80%;
+    display: flex;
+    justify-content: center;
 }
 
 #ab
@@ -177,9 +191,9 @@ font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 
 #progshowdiv
 {
-display: none;
-flex-direction: column;
-width: 80%;
+    display: none;
+    flex-direction: column;
+    width: 80%;
 }
 
 #progshowdiv div
@@ -209,6 +223,7 @@ width: 80%;
     width: 40%;
     display: inline;
     flex:  5;
+    transition: 0.5s;
 }
 
 #progshowdiv img:hover
@@ -260,18 +275,31 @@ width: 80%;
     border-width: 2px;
 }
 
+#setdiv
+{
+    background: #333;
+    display: none;
+    justify-content: center;
+    width: 100%;
+    color: #fafafa;
+}
+
+#settab tr
+{
+    border: 1px solid #fafafa;
+}
+
 #footer
 {
     float: left;
+    display: flex;
+    justify-content:center;
+    line-height: 100px;
     width: 100%;
     height: 100px;
     background: #333;
     border-top: 1px solid #fafafa;
     position: relative;
-    bottom: opx;
+    bottom: 0px;
+    color: #fafafa;
 }
-
-/*@media screen 
-{
-    
-}*/

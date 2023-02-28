@@ -3,9 +3,12 @@ let i=0;
 let j=0;
 let z=0;
 let a=1;
+let b=0;
+let c=0;
 
 //not so normal vars
 let psd=document.getElementById('progshowdiv');
+let ts=document.getElementById('themeselect');
 let sider1=document.getElementById('sider1');
 let sud=document.getElementById('signupdiv');
 let htmld=document.getElementById('htmldiv');
@@ -15,8 +18,9 @@ let sb=document.getElementById('submbutt');
 let aud=document.getElementById('audiv');
 let main=document.getElementById('main');
 let jsd=document.getElementById('jsdiv');
-let as=document.getElementById('as');
+let sd=document.getElementById('setdiv');
 let ad=document.getElementById('adiv');
+let as=document.getElementById('as');
 
 //one use buttons
 document.getElementById('p').addEventListener("click",OCProgress);
@@ -29,7 +33,8 @@ document.getElementById('hp').addEventListener("click",OCIQButton);
 document.getElementById('htmlspan').addEventListener("click",OCHTMLTF);
 document.getElementById('cssspan').addEventListener("click",OCCSSTF);
 document.getElementById('jsspan').addEventListener("click",OCJSTF);
-
+document.getElementById('s').addEventListener("click",OCSettingsTF);
+document.getElementById('themeselect').addEventListener("change",OCThemeTF);
 
 let mainobj=[aud,psd,ad];
 
@@ -98,4 +103,31 @@ function OCJSTF()
 {
     OCTF(jsd,z);
     z++;
+}
+
+function OCThemeTF()
+{
+
+    let status=null;
+    if(c%2==0)
+        status=true;
+    else
+        status=false;
+    if(status)
+    {
+        document.body.style.background="url(pmimg/wbw.jpg) no-repeat fixed";
+        document.body.style.backgroundSize="cover";
+    }   
+    else
+    {
+        document.body.style.background="url(pmimg/brickwall.jpg) no-repeat fixed";
+        document.body.style.backgroundSize="cover";
+    }
+    c++;
+}
+
+function OCSettingsTF()
+{
+    OCTF(sd,b);
+    b++;
 }
