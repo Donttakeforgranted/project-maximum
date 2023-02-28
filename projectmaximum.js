@@ -2,7 +2,7 @@
 let i=0;
 let j=0;
 let z=0;
-let a=0;
+let a=1;
 
 //not so normal vars
 let psd=document.getElementById('progshowdiv');
@@ -12,7 +12,7 @@ let htmld=document.getElementById('htmldiv');
 let dark=document.getElementById('darkness');
 let cssd=document.getElementById('cssdiv');
 let sb=document.getElementById('submbutt');
-let aus=document.getElementById('auspan');
+let aud=document.getElementById('audiv');
 let main=document.getElementById('main');
 let jsd=document.getElementById('jsdiv');
 let as=document.getElementById('as');
@@ -23,6 +23,7 @@ document.getElementById('p').addEventListener("click",OCProgress);
 document.getElementById('au').addEventListener("click",OCAboutUs);
 document.getElementById('su').addEventListener("click",OCSignUpWindow);
 document.getElementById('ab').addEventListener("click",OCIQValueAdder);
+document.getElementById('hp').addEventListener("click",OCIQButton);
 
 //multiple use buttons
 document.getElementById('htmlspan').addEventListener("click",OCHTMLTF);
@@ -30,7 +31,7 @@ document.getElementById('cssspan').addEventListener("click",OCCSSTF);
 document.getElementById('jsspan').addEventListener("click",OCJSTF);
 
 
-let mainobj=[aus,psd,ad];
+let mainobj=[aud,psd,ad];
 
 function OCDisplayer(el)
 {
@@ -55,18 +56,23 @@ function OCTF(el,it)
 
 function OCIQValueAdder(el)
 {
-    as.innerHTML="gələn ağlın miqdarı: " +a;
+    as.innerHTML="Göndərilən ağlın miqdarı: " +a;
     a++;
 }
 
 function OCAboutUs(el)
 {
-    OCDisplayer(aus)
+    OCDisplayer(aud);
 }
 
 function OCProgress(el)
 {
-    OCDisplayer(psd)
+    OCDisplayer(psd);
+}
+
+function OCIQButton(el)
+{
+    OCDisplayer(ad);
 }
 
 function OCSignUpWindow(el)
